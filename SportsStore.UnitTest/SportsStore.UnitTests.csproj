@@ -95,11 +95,16 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Tests\AdminSecurityTests.cs" />
+    <Compile Include="Tests\AdminTests.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="Tests\CartTests.cs" />
+    <Compile Include="Tests\ImageTests.cs" />
+    <Compile Include="Tests\WebUnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

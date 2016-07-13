@@ -1,0 +1,18 @@
+﻿@model SportsStore.Domain.Entities.Product
+
+@{
+    ViewBag.Title = "Sports Store - Home";
+}
+
+<h2>Welcome to the Store!</h2>
+
+<h4>Check out the featured product!</h4>
+
+@Html.Partial("ProductSummary", @Model)
+
+<br />
+
+<div class="text-center">
+    @Html.ActionLink("Check out the rest of our awesome stuff", "List", "Product")
+</div>
+

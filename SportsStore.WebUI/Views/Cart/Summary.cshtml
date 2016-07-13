@@ -1,0 +1,16 @@
+﻿@model SportsStore.Domain.Entities.Cart
+
+@if (Model.Items.Count() > 0)
+{
+    <div class="navbar-right">
+        @Html.ActionLink("View Cart", "Index", "Cart",
+                    new { returnUrl = Request.Url.PathAndQuery },
+                    new { @class = "btn btn-default navbar-btn" })
+    </div>
+}
+
+<div class="navbar-text navbar-right">
+    <b>Your Shopping Cart:</b>
+    @Model.Items.Sum(x => x.Quantity) item(s),
+    @Model.ComputeTotalValue().ToString("c")
+</div>

@@ -1,0 +1,19 @@
+﻿@model SportsStore.Domain.Entities.Product
+
+@{
+    ViewBag.Title = "Sports Store - " + @Model.Name + " Image";
+}
+
+<h2>@Model.Name</h2>
+
+<img class="img-thumbnail" width="300" height="300" 
+     src="@Url.Action("GetImage", "Product", new { Model.ProductID })" 
+     alt="@Model.Description" />
+
+<div class="text-center">
+    <h3>
+        @Html.ActionLink("Return to " + @Model.Name + " details", "Details", "Product", 
+                new { productId = @Model.ProductID }, null) 
+    </h3>
+</div>
+
